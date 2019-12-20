@@ -9,14 +9,14 @@ function reducer(state = {count: 0}, action){
   }
 }
  
-function dispatch(action){
-  state = reducer(state, action)
-  render()
-}
- 
 function render(){
   let container = document.getElementById('container');
   container.textContent = state.count;
+}
+
+function dispatch(action){
+  state = reducer(state, action)
+  render()
 }
 
 let button = document.getElementById('button');
